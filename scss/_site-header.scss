@@ -1,0 +1,65 @@
+// Universal header style
+header {
+    @include flex;
+    @include justify-content(space-between);
+    color: $secondary_text_color;
+    font-size: 1.5rem;
+    .header__logo {
+       margin: 1.5rem; 
+       &:hover { 
+           text-decoration: none; 
+           color: $main_text_color;
+        }
+    }    
+    .menu-btn {
+        margin: 1.5rem;
+        right: 0;
+        cursor: pointer;
+        text-decoration: none;
+        z-index: 1000;
+        position: fixed;  
+    }
+    a { 
+       @include linkStyle-homepage;
+    }
+}
+// Header style for about me page
+.header--about-me {
+    color: $main_text_color;
+    a {
+        @include linkStyle;
+    }
+}
+// Header style for blog page
+.header--blog {
+    color: $main_text_color;
+    a {
+        @include linkStyle;
+    }
+}
+// Header style for integrativna page
+.header--integrativna {
+    color: $main_text_color;
+    a {
+        @include linkStyle;
+    }
+}
+// Header style for post page
+.header--post {
+    color: $main_text_color;
+    a {
+        @include linkStyle;
+    }
+}
+@media screen and(max-width: 375px) {
+    header {
+        font-size: 1rem;
+        width: 100%;
+        .header__logo {
+        margin-top: 2rem;  
+        }    
+        .menu__btn {
+            margin: 0;
+        }
+    }
+}

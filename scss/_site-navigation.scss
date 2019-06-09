@@ -1,0 +1,88 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 100vh;
+    background: $background_color;
+    font-size: 3rem;  
+    z-index: 1;
+    @include transition(.3s);  
+    .navbar__closebtn {
+        display: none;
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.5rem;
+        margin-left: 50px;
+        color: $main_text_color;
+        cursor: pointer;
+    }
+    .navbar__list {
+        @include flex;
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        margin-left: 20%; 
+        margin-top: 12rem;   
+        height: 100%;    
+    }
+.navbar__item {
+    list-style: none;
+    cursor: pointer;   
+    a {
+        color: $main_text_color;
+        display: inline;  
+        &:hover {
+            color: $main_text_color;
+            text-decoration: none;
+        }
+        &:focus {
+            color: $main_text_color;
+            text-decoration: none;
+        }
+    }           
+}
+.underline {
+    position: relative;
+    margin: 3px;
+    &:hover,
+    &:focus,
+    &:active {
+    &:after {
+        width: 100%;
+    }
+  }
+  &:after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -5px;
+      height: 3px;
+      background-color: $main_text_color;
+      width: 0;
+      @include transition (width .25s);
+    }
+  }
+}
+.sub-menu {
+    font-size: 2rem;
+    margin:1rem 0;
+    display: none;
+}
+.navbar__wrapper {
+    border: 1px solid $main_text_color;
+    height: 97vh;
+    margin: 1rem;
+}
+.navbar .navbar__item a {
+    margin: 0;
+}
+// Media queries
+@media screen and (max-width: 1080px) {
+    .navbar {
+        font-size: 2.5rem;  
+    }
+    .navbar__item--special {
+        font-size: 1.5rem;
+    }
+}

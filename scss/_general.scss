@@ -1,0 +1,16 @@
+*:focus {
+    outline:none;
+}
+html {
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+}
+body {
+    position: relative;
+}
+.screen-reader-text {
+    display: none;
+}
+@include main; 
+

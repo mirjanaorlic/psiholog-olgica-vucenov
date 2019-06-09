@@ -1,0 +1,57 @@
+.entry-content {
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: normal;
+        &::selection {
+            background-color: #4B0082;
+            color: $secondary_text_color;
+        }
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.3rem; 
+        line-height: 1.4;
+        font-weight: normal;
+        &::selection {
+            background-color: $selection_color;
+            color: $secondary_text_color;
+        }
+    }
+}
+li {
+    &::selection {
+        background-color: #4B0082;
+        color: $secondary_text_color;
+    }
+}
+// Media queries
+@media screen and (max-width: 1440px) {  
+    p {
+        font-size: 1rem;
+    }     
+}
+@media screen and (max-width: 768px) { 
+    .entry-content {
+        h1 {
+            font-size: 2rem;  
+        }  
+        h2 {
+            font-size: 1.5rem;
+        }
+    }    
+}
+@media screen and (max-width: 375px) {
+    .entry-content {
+        p {
+            font-size: .9rem;
+        }
+    }   
+}
+

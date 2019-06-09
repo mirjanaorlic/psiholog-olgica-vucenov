@@ -1,0 +1,120 @@
+
+// Homepage wrapper
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+// Homepage showcase
+.showcase {
+    color: $secondary_text_color;
+    letter-spacing: 1px;
+    text-align: start;
+    margin-top: 8rem; 
+    margin-left: 14rem;
+    margin-right: 20rem;
+    width: 40%;
+    .showcase__box-1 {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .showcase__box-2 {
+        p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        margin-top: 4rem;
+        width: 70%;
+    }
+}
+// Media queries 
+@media screen and (max-width: 1550px) {
+     .showcase {
+        letter-spacing: 1.5px;
+        width: 42%;  
+        .showcase__box-1 {
+            h1 {
+                line-height: 1.3;  
+                font-size: 1.7rem;     
+            }    
+        }  
+        .showcase__box-2 {
+            p {
+                font-size: .8rem;
+            }         
+        }
+    }
+}
+@media screen and (max-width: 1366px) {   
+    .showcase {
+       margin-top: 4rem; 
+       width: 42%;   
+       .showcase__box-1 {
+            h1 {
+                font-size: 1.5rem;
+            }
+       }   
+       .showcase__box-2 {
+          p {
+            font-size: .8rem;
+          }
+       }
+   }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        background-image: url(../img/background-photo-responsive.png) !important;
+    }
+    .showcase {
+        width: 60%;
+    
+        .showcase__box-1 {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .showcase__box-2 {
+            width: 80%;
+            p {
+            font-size: .7rem;
+            }
+        }
+    }
+}
+@media screen and(max-width: 560px) {
+    .showcase {
+        margin-left: 6rem; 
+    }
+}
+@media screen and(max-width: 375px) {
+    .showcase {
+        margin-top: 4rem; 
+        margin-left: 4rem;
+        width: 60%;
+        .showcase__box-1 {
+            h1 {
+                font-size: .8rem;
+                line-height: 1.3;
+            }
+        }
+        .showcase__box-2 {
+            width: 100%;
+            font-size: .4rem;
+        }
+    }
+}
+@media screen and(max-height: 700px) {   
+    .showcase {
+        .showcase__box-1 {  
+            h1 {
+                font-size: 1rem;
+            }
+        }
+        .showcase__box-2 {
+            width: 100%;
+            font-size: .5rem;
+            padding-bottom: 2rem;
+        }
+    }
+}

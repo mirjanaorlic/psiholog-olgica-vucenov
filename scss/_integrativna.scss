@@ -1,0 +1,99 @@
+// Integrativna wrapper
+.wrapper--integrativna {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $background_color;    
+}
+.showcase--integrativna {
+    color: $main_text_color;
+    margin-top: 8rem;
+    margin-left: 14rem;
+    width: 65%;
+    p {
+        margin-bottom: 4rem;
+    }
+    .section-title {
+        width: 90%;
+        margin-bottom: 4rem;
+    }
+    .list-1 { 
+        margin-bottom: 3rem;
+        margin-left: 2rem;
+        line-height: 1.5;
+        li {
+            font-size: 1.5rem;
+            line-height: 2;
+            span {
+                font-size: 2.5rem;
+                &::selection {
+                    background-color: $selection_color;
+                    color: $secondary_text_color;
+                }
+            }
+        }
+    }
+    .list-2 {
+        margin-bottom: 2rem;
+        @include flex;
+        @include flex-wrap(wrap);
+        list-style-position: inside;
+        line-height: 1.5;
+        .list-2-item {
+            width: 35%;
+            margin: 0 4rem 2rem 0;
+            font-size: 1.3rem;
+        }        
+    }
+    .section-title--bottom {
+        padding-bottom: 4rem;
+    } 
+}
+// Media queries
+@media screen and(max-width: 1366px) {  
+    .showcase--integrativna {
+        margin-top: 4rem;
+    }
+}
+@media screen and(max-width: 768px) {
+    .showcase--integrativna {
+        .section-title {
+            width: 70%;
+        }
+        .list-1 {        
+            li span {
+                font-size: 2rem;
+                line-height: 2;
+            }
+        }  
+        .list-2 {
+            @include flex-direction(column);       
+            .list-2-item {
+                width: 70%;
+            }        
+        }
+        .section-title--bottom {
+           width: 90%;
+        }     
+    }
+}
+@media screen and(max-width: 560px) {  
+    .showcase--integrativna {
+        margin-left: 6rem; 
+    }
+}
+@media screen and(max-width: 375px) {      
+    .showcase--integrativna {
+        margin-top: 4rem;
+        margin-left: 4rem;
+        width: 75%;   
+        .section-title {
+            font-size: 1.2rem;
+        }
+        .list-1 {           
+            li span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

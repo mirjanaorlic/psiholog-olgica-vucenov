@@ -1,0 +1,75 @@
+// Footer
+.site-footer {
+    position: fixed;
+    color: $secondary_text_color;
+    bottom: 0;
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(flex-end);
+    width: 100%;
+    padding-bottom: 1.5rem;
+    a {
+        @include linkStyle-homepage;
+    }
+    .footer__logo {
+       padding-left: 1.5rem;
+       img {
+           max-width: 4.4rem;
+           height: auto;
+       }
+    }
+    .contact {
+        padding-right: 1.5rem;
+        cursor: pointer;
+        float: left;
+        line-height: 1.5rem;
+    }
+    .mail {
+       margin-left: 2rem;
+       float: right;    
+       img {
+        max-width: 2rem;
+        height: auto;
+    }
+  }
+}
+// Footer style for about me page
+.footer--about-me {
+    a {
+        @include linkStyle;
+    }
+}
+// Footer style for blog page
+.footer--blog {
+    a {
+        @include linkStyle;
+    }
+}
+// Footer style for integrativna page
+.footer--integrativna {
+    a {
+        @include linkStyle;
+    }
+}
+// Footer style for post page
+.footer--post {
+    a {
+        @include linkStyle;
+    }
+}
+// Footer style for o psihoterapiji page
+.footer--o-psihoterapiji {
+    a {
+        @include linkStyle;
+    }
+}
+@media screen and (max-width: 768px) {
+    .site-footer {
+        .contact {
+            float: none;
+        }
+        .mail {
+        float: none;
+       }
+    }
+}

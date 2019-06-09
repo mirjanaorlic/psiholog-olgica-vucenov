@@ -1,0 +1,155 @@
+// Post wrapper
+.wrapper--post {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $background_color;    
+}
+// Post showcase
+.showcase--post {
+    h4 {
+        margin-bottom: 2rem;
+    }
+    .post-img {
+        height: auto;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+    color: $main_text_color;
+    text-align: start;
+    margin-top: 8rem;
+    margin-left: 14rem;
+    width: 80%;
+    .title {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+    // Post wrapper
+    .post__wrapp {
+        @include flex;
+        @include justify-content(space-between);
+        width: 100%; 
+        .post__box-1 {
+            width: 65%;
+            padding-bottom: 7rem;      
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+        .post__box-2 {
+           width: 20%;
+           .form-comments {
+            label {
+                 margin-bottom: 2rem;
+            }      
+            textarea {
+                max-width: 100%;
+                border: 1px solid $main_text_color;
+                resize: none;
+                background-color: $background_color;
+                color: $main_text_color;
+                font-size: 1rem;
+                margin-top: 2rem;
+            }
+           .form__btn {
+               @include flex;
+               @include justify-content(flex-end);
+               max-width: 100%;
+            .btn {
+                background: transparent;
+                border: none;
+                color: $main_text_color;
+                padding: 1rem 0;
+                cursor: pointer;  
+                font-size: 1rem;
+                margin-bottom: 4rem;
+            }
+           }
+        }
+           p {
+            font-size: 1rem;
+           }
+        }
+    }
+}
+.footer--post {
+    a {
+        @include linkStyle;
+    }
+}
+// Media queries 
+@media screen and (max-width: 1366px) {
+    margin-top: 4rem;
+}
+@media screen and (max-width: 1200px) {
+    .showcase--post {  
+        // post wrapper
+        .post__wrapp {
+            .post__box-1 {
+            width: 60%;       
+            }
+            .post__box-2 {
+                width: 30%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1080px) {
+    .showcase--post {
+     // post wrapper
+     .post__wrapp {
+         .post__box-1 {
+            width: 50%;       
+         }
+         .post__box-2 {
+             width: 30%;
+             margin-right: 6rem;
+         }
+      }
+    }
+ }
+@media screen and (max-width: 768px) {
+    .wrapper--post {
+        height: auto;
+    }
+    .showcase--post {
+        margin: 4rem 0 0 14rem;
+        width: 70%;
+        .title {
+            font-size: 1.8rem;
+            width: 80%;
+            margin-bottom: 3rem;
+        }   
+        .post__wrapp {
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            @include align-items(flex-start);
+            width: 100%;
+            height: auto;
+            .post__box-1 {
+                width: 80%;
+                font-size: 1rem;       
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+            .post__box-2 {
+               width: 80%;
+               height: auto;
+               margin: 2rem 0 6rem 0;        
+            }
+        }
+    }
+}
+@media screen and(max-width: 375px) {
+    .showcase--post {
+        margin: 4rem 0 0 6rem;   
+        .post__wrapp {
+            width: 80%;
+        }
+    }
+}

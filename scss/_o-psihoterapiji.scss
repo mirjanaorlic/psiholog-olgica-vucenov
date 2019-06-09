@@ -1,0 +1,52 @@
+.wrapper--o-psihoterapiji {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $background_color;    
+}
+.showcase--o-psihoterapiji {
+    color: $main_text_color;
+    margin-top: 8rem;
+    margin-left: 14rem;
+    width: 65%;
+    h1 {
+        margin-bottom: 4rem;
+    }
+}
+.showcase__flex-wrapper {
+    @include flex;
+    @include flex-wrap(wrap);
+    margin-bottom: 2rem;
+    .box {
+        width: 35%;
+        margin: 0 6rem 2rem 0;       
+    }
+    h2 {
+        padding-bottom: 2rem;
+    }
+}
+.section-p__top {
+    padding-bottom: 4rem;
+    width: 80%;
+}
+.section-p__bottom {
+    margin-bottom: 8rem;
+    margin-top: 3rem;
+    width: 80%;
+}
+@media screen and (max-width: 890px) {
+    .showcase__flex-wrapper {   
+        @include flex-direction(column);
+        @include flex-wrap(nowrap);
+        .box {
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .showcase--o-psihoterapiji  {
+        margin-top: 4rem;
+        margin-left: 4rem;
+        width: 75%;
+    }
+}
